@@ -1,0 +1,12 @@
+{
+	"customerId": 111711978,
+	"customerName": "Aleem",
+	"customerEmail": "skaleeminfo@gmail.com",
+	"customerAge": 36,
+	"insurancePolicy": {
+		"policyName": "Jivan-Anand",
+		"startDate": "19-10-2021",
+		"endDate": "18-10-2031",
+		"premiumAmount": 25000.0
+	}
+}
