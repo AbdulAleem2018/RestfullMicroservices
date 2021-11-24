@@ -3,6 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.techi.7486</groupId>
+	<artifactId>restfal</artifactId>
+	<version>0.1</version>
+	<name>SpringBootJpaWithH2DataBase</name>
+	<description>Demo project for Spring Boot and SpringBootJpaWithH2AndOracleDataBase</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -11,58 +16,52 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.techi.7486</groupId>
-	<artifactId>restfal</artifactId>
-	<version>0.1</version>
-	<name>SpringBootJpaWithH2DataBase</name>
-	<description>Demo project for Spring Boot and SpringBootJpaWithH2AndOracleDataBase</description>
-
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
-		<!-- Enable Automatic Restart for Spring Boot project -->
+		<!-- Enable Automatic apply source modifications, create jar, deploy jar into server and Restart the server for Spring Boot project -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- Connect to Oracle Database with Spring Data JPA -->
+		<!-- To perform DB operations with Spring Data JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!-- Develop web app, download, install inbuilt embedded tomcat server  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- To get HATEOS response(Response in link format) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
 		<!-- Working with JSON API -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
-		<!-- Working with compJSON API -->
+		<!-- Working with GSON API -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		<!-- Working with lombok API for auto generate setter,getter methods and constructors-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
-		</dependency>
-		<!-- Working with JSON API -->
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
 		</dependency>
 		<!-- connect to OracleDB and load OracleDriver class -->
 		<dependency>
@@ -70,13 +69,16 @@
 			<artifactId>ojdbc8</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- Get the Xml responce when we are retreiving multiple records -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Get the XML response when we are retrieving multiple records -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
-			<version>2.3.1</version>
 		</dependency>
-
 	</dependencies>
 	<build>
 		<plugins>
