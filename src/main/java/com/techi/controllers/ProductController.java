@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.techi.Springboot.Product;
+import com.techi.Springboot.ProductRepository;
 import com.techi.service.ProductService;
 
 @RestController
@@ -22,7 +24,10 @@ public class ProductController {
 	
 	@Autowired
 	private ProductService productService;
-		
+	
+	@Autowired
+	ProductRepository productRepository;
+	
 	@PostMapping(
 				value="/add-product",
 				consumes = {"application/xml", "application/json"}
@@ -61,6 +66,18 @@ select * from product;
 3	Desktop	59990	29-03-18	30-03-18
 
 **/
+	
+	@PostMapping(
+			value="/new-product",
+			consumes = {"application/xml", "application/json"},
+			produces = {"application/xml", "application/json"}
+		)
+public ResponseEntity<Product> newProduct(@RequestBody Product product){
+	System.out.println("Befpre call....");
+	productService.saveOrUpdate(product);
+	System.out.println("New Product added");
+	return new ResponseEntity<Product>(product,HttpStatus.CREATED);
+}
 	
 	@PutMapping(
 			value="/update-product",
