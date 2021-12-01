@@ -21,7 +21,8 @@
 	</properties>
 
 	<dependencies>
-		<!-- Enable Automatic apply source modifications, create jar, deploy jar into server and Restart the server for Spring Boot project -->
+		<!-- Enable Automatic apply source modifications, create jar, deploy jar 
+			into server and Restart the server for Spring Boot project -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -32,7 +33,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!-- Develop web app, download, install inbuilt embedded tomcat server  -->
+		<!-- Develop web app, download, install inbuilt embedded tomcat server -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -57,7 +58,7 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
-		<!-- Working with lombok API for auto generate setter,getter methods and constructors-->
+		<!-- Working with lombok API for auto generate setter,getter methods and constructors -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -78,6 +79,12 @@
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
+		</dependency>
+		<!-- To generate Swagger Documentation -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>

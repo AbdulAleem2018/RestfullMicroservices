@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.techi.Springboot.Product;
-import com.techi.Springboot.ProductRepository;
+
+import com.techi.Product;
+import com.techi.ProductRepository;
 
 @Service
 public class ProductService {
