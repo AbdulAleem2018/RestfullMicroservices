@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.techi.bindings.Address;
 import com.techi.bindings.Student;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
 @RestController//This class represent as Distributed Component and Spring Bean
 @RequestMapping("/controler")
 public class WelcomeController {
@@ -182,6 +185,16 @@ PostMan: Student details saved (Status: 201 Created)
 		String message="Student details saved";
 		
 		return new ResponseEntity<String>(message,HttpStatus.CREATED);
+	}
+	
+	/**
+	 Request: GET: http://localhost:8080/controler/swaggerMsg/Aleem
+	 Response: Aleem Good Morning!!
+	 */
+	@ApiOperation(value="This operation is used for generate swagger message" ,response = String.class)
+	@GetMapping("/swaggerMsg/{name}")
+	public String swaggerMessage(@ApiParam("Name to Wish") @PathVariable String name) {
+		return name+" Good Morning!!";
 	}
 	
 }
