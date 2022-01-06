@@ -96,6 +96,12 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		<!-- To implement Rest Client Application using WebClient instead of RestTemplate(by using Resource App Swagger API)-->
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-webflux</artifactId>
+    		<version>2.5.6</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
