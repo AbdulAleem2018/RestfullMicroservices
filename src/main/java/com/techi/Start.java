@@ -6,11 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
-import com.techi.bindings.Passenger_RequestBinding_Class;
-import com.techi.bindings.Ticket_ResponceBinding_Class;
-import com.techi.service.Covid19Service;
-import com.techi.service.TicketService;
-
 @Configuration
 @EnableAutoConfiguration
 @SpringBootApplication

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.techi.bindings.AllDailyCovid;
 import com.techi.bindings.Passenger_RequestBinding_Class;
 import com.techi.bindings.Ticket_ResponceBinding_Class;
 
